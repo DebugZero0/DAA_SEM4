@@ -1,0 +1,25 @@
+- Knapsack
+|-Here an item taken as a whole or not taken at all
+|-selection of items based on value/weight ratio
+|-sometimes greedy fails to give optimal solution
+
+- Fractional Knapsack
+|-Items can be broken into smaller pieces
+|-selection of items based on value/weight ratio
+|-always gives optimal solution
+
+- Activity Selection
+|-Sort activities by finish time
+|-If its start time is greater than or equal to the finish time of the last selected activity, select it.
+|-Update the last selected activity to the current one
+
+- Job Sequencing
+|-Sort jobs by profit in descending order
+|-Find Maximum deadline among all jobs
+|-create a slot array of size max_deadline+1 and initialize it with -1
+|-For each job, find a free slot from its deadline to 1 , any slot that is free and less than or equal to the deadline will be assigned to the job
+|-If a free slot is found, assign the job to that slot and mark it as occupied
+|-Print the selected jobs and their total profit
+
+- Dijkstra's Algorithm
+|-Single source shortest path algorithm for graphs with non-negative edge weights
