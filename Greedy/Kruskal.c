@@ -2,12 +2,12 @@
 
 int parent[100];
 
-int find(int v)
+int find(int i)
 {
-    while(parent[v] != v)
-        v = parent[v];
+    while(parent[i] != i)
+        i = parent[i];
 
-    return v;
+    return i;
 }
 
 void unionSet(int u, int v)
@@ -33,7 +33,7 @@ int main()
         scanf("%d %d %d", &src[i], &dest[i], &wt[i]);
     }
 
-    // Initialize parent array
+    // Initialize parent array-Beacuse each vertex is its own parent initially
     for(int i = 0; i < n; i++)
     {
         parent[i] = i;
@@ -72,7 +72,7 @@ int main()
         int u = find(src[i]);
         int v = find(dest[i]);
 
-        if(u != v)
+        if(u != v) // Indicates that the edge does not form a cycle
         {
             printf("%d -- %d = %d\n",
                    src[i],
@@ -89,3 +89,6 @@ int main()
 
     return 0;
 }
+
+// Time Complexity: O(E log E) due to sorting the edges
+// Space Complexity: O(V) for the parent array used in the union-find structure, where V is the number of vertices in the graph.

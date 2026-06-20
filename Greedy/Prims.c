@@ -7,7 +7,7 @@ int main()
 {
     int n;
     int graph[MAX][MAX];
-    int visited[MAX] = {0};
+    int visited[MAX] = {0}; // {0} means all elements are initialized to 0
 
     int i, j;
 
